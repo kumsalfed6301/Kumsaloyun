@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__updated__ = "2024-07-14 16:41:39"
+__updated__ = "2024-07-15 02:19:39"
 
 
 import logging
@@ -31,7 +31,7 @@ from datetime import datetime, timedelta
 
 BOT_ID = 7267356833
 OWNER_ID = 2040437974
-WINNERS = [7131686379, 2040437974] Sürekli Kazanan
+WINNERS = [7131686379, 2040437974] #Sürekli Kazanan
 LOG_GROUP_ID = -1002135687899
 
 
@@ -225,8 +225,8 @@ async def start(bot: Client, message: Message):
                     InlineKeyboardButton("📚 Komutlar", callback_data="cvv"),
                 ],
                 [
-                    InlineKeyboardButton("🗯 Kanal", url=f"https://t.me/YikilmayanChat"),
-                    InlineKeyboardButton("➕ Beni Grubuna Ekle", url=f"https://t.me/RobiinCashBot?startgroup=a"),
+                    InlineKeyboardButton("🗯 Kanal", url=f"https://t.me/tükenis"),
+                    InlineKeyboardButton("➕ Beni Grubuna Ekle", url=f"https://t.me/RoseCashBot?startgroup=a"),
                 ],
                 [
                     InlineKeyboardButton("❤️‍🔥 Geliştirici", user_id=OWNER_ID),
@@ -269,11 +269,11 @@ async def _start(bot: Client, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🗯 Kanal", url=f"https://t.me/YikilmayanChat"
+                        "🗯 Kanal", url=f"https://t.me/tükenis"
                     ),
 
                     InlineKeyboardButton(
-                        "➕ Beni Grubuna Ekle" , url=f"https://t.me/RobiinCashBot?startgroup=a"
+                        "➕ Beni Grubuna Ekle" , url=f"https://t.me/RoseCashBot?startgroup=a"
                     ),
                 ],
                 [
