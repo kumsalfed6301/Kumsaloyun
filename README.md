@@ -8,4 +8,4 @@
 - screen -S repoismi
 - python3 main.py
 
- **İletişim:** @Blayzem
+ **İletişim:** @Blayzen
