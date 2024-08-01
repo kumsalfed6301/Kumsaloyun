@@ -226,7 +226,7 @@ async def start(bot: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton("🗯 Kanal", url=f"https://t.me/DostTicaret"),
-                    InlineKeyboardButton("➕ Beni Grubuna Ekle", url=f"https://t.me/RoseCashBot?startgroup=a"),
+                    InlineKeyboardButton("➕ Beni Grubuna Ekle", url=f"https://t.me/AcelyaCashBot?startgroup=a"),
                 ],
                 [
                     InlineKeyboardButton("❤️‍🔥 Geliştirici", user_id=OWNER_ID),
@@ -269,11 +269,11 @@ async def _start(bot: Client, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🗯 Kanal", url=f"https://t.me/tükenis"
+                        "🗯 Kanal", url=f"https://t.me/DostTicaret"
                     ),
 
                     InlineKeyboardButton(
-                        "➕ Beni Grubuna Ekle" , url=f"https://t.me/RoseCashBot?startgroup=a"
+                        "➕ Beni Grubuna Ekle" , url=f"https://t.me/AcelyaCashBot?startgroup=a"
                     ),
                 ],
                 [
