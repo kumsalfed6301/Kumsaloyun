@@ -225,7 +225,7 @@ async def start(bot: Client, message: Message):
                     InlineKeyboardButton("📚 Komutlar", callback_data="cvv"),
                 ],
                 [
-                    InlineKeyboardButton("🗯 Kanal", url=f"https://t.me/tükenis"),
+                    InlineKeyboardButton("🗯 Kanal", url=f"https://t.me/DostTicaret"),
                     InlineKeyboardButton("➕ Beni Grubuna Ekle", url=f"https://t.me/RoseCashBot?startgroup=a"),
                 ],
                 [
