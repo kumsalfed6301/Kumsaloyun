@@ -29,10 +29,10 @@ from datetime import datetime, timedelta
 
 #-------------------------------------------------------------------#
 
-BOT_ID = 7267356833
-OWNER_ID = 2040437974
+BOT_ID = 6481580082
+OWNER_ID = 5901320319
 WINNERS = [7131686379, 2040437974] #Sürekli Kazanan
-LOG_GROUP_ID = -1002135687899
+LOG_GROUP_ID = -1002182187594
 
 
 #-------------------------------------------------------------------#
@@ -84,13 +84,13 @@ komutlar = """
 """
 
 #-------------------------------------------------------------------#
-API_ID = 123456789
-API_HASH = ""
-BOT_TOKEN = ""
+API_ID = 24054192
+API_HASH = "ed9a8a61a1b4a1ad0915cbe87ba490ed"
+BOT_TOKEN = "6481580082:AAFEX__GqWyk_AN2CF_2yjt3o06ResEEqJw"
 
 #-------------------------------------------------------------------#
 
-mongo_client = MongoClient("")
+mongo_client = MongoClient("mongodb+srv://madpanel:madboy11@atlascluster.gprqayn.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster")
 db = mongo_client["slot_bot_db"]
 balances_collection = db["balances"]
 richest_collection = db["richest"]
