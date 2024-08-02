@@ -80,13 +80,13 @@ komutlar = """
 
 🆘 NOT: `/cash`, `/fcash` ve `/bcash` komutları sadece gruplarda çalışır.
 
-**Destek -** @goktuResmi
+**Destek -** @MAD1BOY
 """
 
 #-------------------------------------------------------------------#
 API_ID = 24054192
 API_HASH = "ed9a8a61a1b4a1ad0915cbe87ba490ed"
-BOT_TOKEN = "6481580082:AAFEX__GqWyk_AN2CF_2yjt3o06ResEEqJw"
+BOT_TOKEN = "6481580082:AAEh33NyBDuNt574H7vNDgeeJ_tgzTH1BfM"
 
 #-------------------------------------------------------------------#
 
