@@ -224,6 +224,7 @@ async def start(bot: Client, message: Message):
             [
                 [
                     InlineKeyboardButton("📚 Komutlar", callback_data="cvv"),
+                    ],
                 ],
                 
                 
