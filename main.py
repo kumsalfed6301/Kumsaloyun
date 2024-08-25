@@ -21,7 +21,6 @@ from pyrogram.types import (
 
 import cachetools
 import tgcrypto
-import pydantic-settings
 import pydantic
 import aiogram
 import fluent.runtime
