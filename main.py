@@ -223,7 +223,7 @@ async def start(bot: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📚 oyun", callback_data="cvv"),
+                    InlineKeyboardButton("📚 oyun", callback_data="oyun"),
                     ],
                 ],
                 
@@ -234,7 +234,7 @@ async def start(bot: Client, message: Message):
 
 
 
-@app.on_callback_query(filters.regex("cvv"))
+@app.on_callback_query(filters.regex("oyun"))
 async def handler(bot: Client, query: CallbackQuery):
     await query.edit_message_text(
         Oyunlar,
@@ -260,7 +260,7 @@ async def _start(bot: Client, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "📚 oyun", callback_data="cvv"
+                        "📚 oyun", callback_data="oyun"
                     ),
                 ],
                 
