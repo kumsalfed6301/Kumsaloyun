@@ -1,5 +1,6 @@
 logging
 time
+asyncio
 pyrogram
 pymongo
 sqlite3
