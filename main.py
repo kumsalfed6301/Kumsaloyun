@@ -34,7 +34,7 @@ from datetime import datetime, timedelta
 BOT_ID = 7454035971
 OWNER_ID = 7242000752
 WINNERS = [7242000752] #Sürekli Kazanan
-LOG_GROUP_ID = -1002175552878
+LOG_GROUP_ID = -1002231459610
 
 
 #-------------------------------------------------------------------#
