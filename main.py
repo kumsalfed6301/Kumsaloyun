@@ -82,7 +82,6 @@ komutlar = """
 
 🆘 NOT: `/cash`, `/fcash` ve `/bcash` komutları sadece gruplarda çalışır.
 
-**Destek -** @MAD1BOY
 """
 
 #-------------------------------------------------------------------#
