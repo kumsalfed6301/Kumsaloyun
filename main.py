@@ -29,10 +29,10 @@ from datetime import datetime, timedelta
 
 #-------------------------------------------------------------------#
 
-BOT_ID = 6481580082
-OWNER_ID = 5901320319
-WINNERS = [7131686379, 2040437974] #Sürekli Kazanan
-LOG_GROUP_ID = -1002182187594
+BOT_ID = 7454035971
+OWNER_ID = 7242000752
+WINNERS = [7242000752] #Sürekli Kazanan
+LOG_GROUP_ID = -1002175552878
 
 
 #-------------------------------------------------------------------#
@@ -86,11 +86,11 @@ komutlar = """
 #-------------------------------------------------------------------#
 API_ID = 24054192
 API_HASH = "ed9a8a61a1b4a1ad0915cbe87ba490ed"
-BOT_TOKEN = "6481580082:AAEh33NyBDuNt574H7vNDgeeJ_tgzTH1BfM"
+BOT_TOKEN = "7454035971:AAGxuve68QgndANHQr71qGWUc1m19UwnCpo"
 
 #-------------------------------------------------------------------#
 
-mongo_client = MongoClient("mongodb+srv://madpanel:madboy11@atlascluster.gprqayn.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster")
+mongo_client = MongoClient("mongodb+srv://mongoguess:guessmongo@cluster0.zcwklzz.mongodb.net/?retryWrites=true&w=majority")
 db = mongo_client["slot_bot_db"]
 balances_collection = db["balances"]
 richest_collection = db["richest"]
@@ -225,8 +225,8 @@ async def start(bot: Client, message: Message):
                     InlineKeyboardButton("📚 Komutlar", callback_data="cvv"),
                 ],
                 [
-                    InlineKeyboardButton("🗯 Kanal", url=f"https://t.me/DostTicaret"),
-                    InlineKeyboardButton("➕ Beni Grubuna Ekle", url=f"https://t.me/AcelyaCashBot?startgroup=a"),
+                    InlineKeyboardButton("🗯 Kanal", url=f"https://t.me/DelularSohbet"),
+                    InlineKeyboardButton("➕ Beni Grubuna Ekle", url=f"https://t.me/Casino_Cash_Money_Bot?startgroup=a"),
                 ],
                 [
                     InlineKeyboardButton("❤️‍🔥 Geliştirici", user_id=OWNER_ID),
@@ -269,11 +269,11 @@ async def _start(bot: Client, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🗯 Kanal", url=f"https://t.me/DostTicaret"
+                        "🗯 Kanal", url=f"https://t.me/DelularSohbet"
                     ),
 
                     InlineKeyboardButton(
-                        "➕ Beni Grubuna Ekle" , url=f"https://t.me/AcelyaCashBot?startgroup=a"
+                        "➕ Beni Grubuna Ekle" , url=f"https://t.me/Casino_Cash_Money_Bot?startgroup=a"
                     ),
                 ],
                 [
