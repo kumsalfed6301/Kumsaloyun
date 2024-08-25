@@ -225,14 +225,8 @@ async def start(bot: Client, message: Message):
                 [
                     InlineKeyboardButton("📚 Komutlar", callback_data="cvv"),
                 ],
-                [
-                    InlineKeyboardButton("🗯 Delular", url=f"https://t.me/DelularSohbet"),
-                    InlineKeyboardButton("➕ Beni Grubuna Ekle", url=f"https://t.me/Casino_Cash_Money_Bot?startgroup=a"),
-                ],
-                [
-                    InlineKeyboardButton("❤️‍🔥 Geliştirici", user_id=OWNER_ID),
-                ]
-            ]
+                
+                
         ),
         disable_web_page_preview=True,
     )
@@ -268,20 +262,8 @@ async def _start(bot: Client, query: CallbackQuery):
                         "📚 Komutlar", callback_data="cvv"
                     ),
                 ],
-                [
-                    InlineKeyboardButton(
-                        "🗯 Kanal", url=f"https://t.me/DelularSohbet"
-                    ),
-
-                    InlineKeyboardButton(
-                        "➕ Beni Grubuna Ekle" , url=f"https://t.me/Casino_Cash_Money_Bot?startgroup=a"
-                    ),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "❤️‍🔥 Geliştirici", user_id=OWNER_ID
-                    ),
-                ]
+                
+                
             ],
         ),
         disable_web_page_preview=True,
@@ -1061,10 +1043,10 @@ async def welcome_new_group(client: Client, message: Message):
         await message.reply_text("Bu grup banlandı. Bot gruptan ayrılıyor.")
         await client.leave_chat(chat_id)
     else:
-        await message.reply_text("__Merhaba! Slot botunu grubunuza eklediğiniz için teşekkürler. Komutlar için /komutlar yazabilirsiniz.__ 💫")
+        await message.reply_text("__Merhaba! Slot botunu grubunuza eklediğiniz için teşekkürler. Komutlar için /oyun yazabilirsiniz.__ 💫")
 
 
-@app.on_message(filters.command("komutlar") & filters.group)
+@app.on_message(filters.command("oyun") & filters.group)
 async def send_commands(client: Client, message: Message):
     await message.reply_text(komutlar)
 
@@ -1086,7 +1068,7 @@ async def hg(bot: Client, msg: Message):
     for new_user in msg.new_chat_members:
         if str(new_user.id) == str(BOT_ID):
             await msg.reply(
-                f"""**📖 Hey , {msg.from_user.mention}\nMerhaba! Slot botunu grubunuza eklediğiniz için teşekkürler. Komutlar için /komutlar yazabilirsiniz**""",
+                f"""**📖 Hey , {msg.from_user.mention}\nMerhaba! Slot botunu grubunuza eklediğiniz için teşekkürler. Komutlar için /oyun yazabilirsiniz**""",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
