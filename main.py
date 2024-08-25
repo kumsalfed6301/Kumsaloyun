@@ -55,11 +55,11 @@ __Merhaba! {} 🎰 Slot botuna hoş geldiniz.__
 
 **Ben bir slot botuyum! Hemen oynamaya başlamak için aşağıdaki butonları kullanarak gruba ekleyebilirsiniz.** 🤩
 
-**Komutlarımı görmek için lütfen aşağıdaki butonu kullanın. İyi eğlenceler!** 🥳
+**Oyunlarımı görmek için lütfen aşağıdaki butonu kullanın. İyi eğlenceler!** 🥳
 """
 
-komutlar = """
-🎰 **Komutlar**
+Oyunlar = """
+🎰 **Oyunlar**
 
 • **/cash - Slot oyununu oynamak için.** 🎰
    Örnek: `/cash 50` veya `/cash 50 2x`
@@ -80,7 +80,7 @@ komutlar = """
 
 • **/zenginler - En zengin kullanıcıları görmek için.** 🤑
 
-🆘 NOT: `/cash`, `/fcash` ve `/bcash` komutları sadece gruplarda çalışır.
+🆘 NOT: `/cash`, `/fcash` ve `/bcash` Oyunları sadece gruplarda çalışır.
 
 """
 
@@ -237,7 +237,7 @@ async def start(bot: Client, message: Message):
 @app.on_callback_query(filters.regex("cvv"))
 async def handler(bot: Client, query: CallbackQuery):
     await query.edit_message_text(
-        komutlar,
+        Oyunlar,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -1044,12 +1044,12 @@ async def welcome_new_group(client: Client, message: Message):
         await message.reply_text("Bu grup banlandı. Bot gruptan ayrılıyor.")
         await client.leave_chat(chat_id)
     else:
-        await message.reply_text("__Merhaba! Slot botunu grubunuza eklediğiniz için teşekkürler. Komutlar için /oyun yazabilirsiniz.__ 💫")
+        await message.reply_text("__Merhaba! Slot botunu grubunuza eklediğiniz için teşekkürler. Oyunlar için /oyun yazabilirsiniz.__ 💫")
 
 
 @app.on_message(filters.command("oyun") & filters.group)
 async def send_commands(client: Client, message: Message):
-    await message.reply_text(komutlar)
+    await message.reply_text(Oyunlar)
 
 @app.on_chat_member_updated()
 async def monitor_group(client: Client, chat_member_updated: ChatMemberUpdated):
@@ -1069,7 +1069,7 @@ async def hg(bot: Client, msg: Message):
     for new_user in msg.new_chat_members:
         if str(new_user.id) == str(BOT_ID):
             await msg.reply(
-                f"""**📖 Hey , {msg.from_user.mention}\nMerhaba! Slot botunu grubunuza eklediğiniz için teşekkürler. Komutlar için /oyun yazabilirsiniz**""",
+                f"""**📖 Hey , {msg.from_user.mention}\nMerhaba! Slot botunu grubunuza eklediğiniz için teşekkürler. Oyunlar için /oyun yazabilirsiniz**""",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
