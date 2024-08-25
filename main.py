@@ -223,7 +223,7 @@ async def start(bot: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📚 Komutlar", callback_data="cvv"),
+                    InlineKeyboardButton("📚 oyun", callback_data="cvv"),
                     ],
                 ],
                 
@@ -260,7 +260,7 @@ async def _start(bot: Client, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "📚 Komutlar", callback_data="cvv"
+                        "📚 oyun", callback_data="cvv"
                     ),
                 ],
                 
