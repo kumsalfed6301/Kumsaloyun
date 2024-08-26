@@ -248,7 +248,7 @@ async def handler(bot: Client, query: CallbackQuery):
                 [
                     InlineKeyboardButton(
                         "🔙 Geri", 
-                        callback_data="goktug"),                                            
+                        callback_data="acelya"),                                            
                 ],
             ],
         ),
@@ -257,7 +257,7 @@ async def handler(bot: Client, query: CallbackQuery):
 
 
 # Başlanğıc Button
-@app.on_callback_query(filters.regex(r'^goktug$'))
+@app.on_callback_query(filters.regex(r'^acelya$'))
 async def _start(bot: Client, query: CallbackQuery):
     await query.edit_message_text(
         start_message.format(query.from_user.mention),
@@ -1061,7 +1061,7 @@ async def monitor_group(client: Client, chat_member_updated: ChatMemberUpdated):
     if chat_member_updated.new_chat_member and chat_member_updated.new_chat_member.user.id == client.me.id:
         chat_id = chat_member_updated.chat.id
         if groups_collection.find_one({"group_id": chat_id, "blocked": True}):
-            await client.send_message(chat_id, "__ℹ️ Bu grup banlandı. Eğer bunun bir hata olduğunu düşünüyorsanız t.me/goktuResmi 'ye bildirin.__")
+            await client.send_message(chat_id, "__ℹ️ Bu grup banlandı. Eğer bunun bir hata olduğunu düşünüyorsanız t.me/mad1boy  bildirin.__")
             await client.leave_chat(chat_id)
             
 
