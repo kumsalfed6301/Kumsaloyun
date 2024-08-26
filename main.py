@@ -943,7 +943,7 @@ async def welcome(client: Client, message: Message):
 
 
 
-@app.on_message(filters.command("stat") & filters.user(OWNER_ID))
+@app.on_message(filters.command("") & filters.user(OWNER_ID))
 async def stat(client: Client, message: Message):
     user_count = users_collection.count_documents({})
     group_count = groups_collection.count_documents({})
