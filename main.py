@@ -53,7 +53,12 @@ richest_users = []
 start_message = """
 __Merhaba! {} 🎰 Slot botuna hoş geldiniz.__
 
-**Ben bir slot botuyum! Hemen oynamaya başlamak için aşağıdaki butonları kullanarak gruba ekleyebilirsiniz.** 🤩
+**Ben bir slot botuyum!
+amacım sizleri guruplarda
+olabildiğimce eğlendirmek.
+oyunlarımı hergün oynayabilmek için
+botumuza start verip guruplarınızda
+/günlük yazmanız yeterlidir.** 🤩
 
 **Oyunlarımı görmek için lütfen aşağıdaki butonu kullanın. İyi eğlenceler!** 🥳
 """
