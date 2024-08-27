@@ -373,7 +373,7 @@ async def play_basket(client: Client, message: Message):
     user_id = message.from_user.id
 
     if user_id not in user_balances:
-        await message.reply("__Basketbol oyununu oynamak için önce özelden start verin. 💫__   🏷️ @AcelyaMusicBot ")
+        await message.reply("__Basketbol oyununu oynamak için önce özelden start verin. 💫__    🏷️ @AcelyaMusicBot ")
         return
 
     current_time = datetime.now()
