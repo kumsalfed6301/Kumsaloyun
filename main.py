@@ -92,6 +92,13 @@ Oyunlar = """
 """
 
 #-------------------------------------------------------------------#
+reklam = """
+🎰 **reklam**
+
+reklamlar
+
+"""
+#_________________________________________#
 API_ID = 24054192
 API_HASH = "ed9a8a61a1b4a1ad0915cbe87ba490ed"
 BOT_TOKEN = "7090522217:AAHl4mkav_faEElKDk3KlT4L7EtbdepYyjE"
@@ -257,6 +264,25 @@ async def handler(bot: Client, query: CallbackQuery):
         disable_web_page_preview=True,
     )
 
+#________________________________#
+#reklam#
+
+@app.on_callback_query(filters.regex("reklam"))
+async def handler(bot: Client, query: CallbackQuery):
+    await query.edit_message_text(
+        reklam,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "🔙 Geri", 
+                        callback_data="acelya"),                                            
+                ],
+            ],
+        ),
+        disable_web_page_preview=True,
+    )
+#________________________________________#
 
 # Başlanğıc Button
 @app.on_callback_query(filters.regex(r'^acelya$'))
