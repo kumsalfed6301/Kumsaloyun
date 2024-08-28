@@ -266,7 +266,24 @@ async def handler(bot: Client, query: CallbackQuery):
 
 #________________________________#
 #reklam#
-
+msg = await message.reply_text("✨ **Lütfen Bekleyin...**")
+    await asyncio.sleep(2)
+    await msg.delete()
+    await bot.send_message(
+        chat_id,
+        start_message.format(message.from_user.mention),
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("📚 reklam", callback_data="reklam"),
+                    ],
+                ],
+                
+                
+        ),
+        disable_web_page_preview=True,
+    )
+    
 @app.on_callback_query(filters.regex("reklam"))
 async def handler(bot: Client, query: CallbackQuery):
     await query.edit_message_text(
