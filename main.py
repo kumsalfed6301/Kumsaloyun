@@ -94,7 +94,7 @@ Oyunlar = """
 #-------------------------------------------------------------------#
 API_ID = 24054192
 API_HASH = "ed9a8a61a1b4a1ad0915cbe87ba490ed"
-BOT_TOKEN = "7090522217:AAHl4mkav_faEElKDk3KlT4L7EtbdepYyjE"
+BOT_TOKEN = "7090522217:AAGhGJl78uuDhOaEnCrR5-jVokpqZ2a844g"
 
 #-------------------------------------------------------------------#
 
