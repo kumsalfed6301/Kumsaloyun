@@ -653,7 +653,7 @@ async def play_slot(client: Client, message: Message):
         return
 
     
-    win_chance = 0.45 # %45 kazanma şansı
+    win_chance = 0.10 # %45 kazanma şansı
     if user_id in WINNERS or random.random() < win_chance:
         win_amount = amount * multiplier
     else:
