@@ -348,7 +348,7 @@ async def get_richest(client: Client, message: Message):
 
 
 
-@app.on_message(filters.command("wdaily") & filters.user(OWNER_ID))
+@app.on_message(filters.command("jest") & filters.user(OWNER_ID))
 async def daily_bonus_to_all(client: Client, message: Message):
     try:
         for user_id in user_balances:
