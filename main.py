@@ -984,7 +984,7 @@ async def daily_atm(client: Client, message: Message):
         if last_atm_time:
             
             elapsed_time = current_time - last_atm_time
-            remaining_time = atm_interval_hours * 2 - elapsed_time.total_seconds()
+            remaining_time = atm_interval_hours * 3600 - elapsed_time.total_seconds()
             
             if remaining_time > 0:
                 minutes_remaining = int(remaining_time // 60)
