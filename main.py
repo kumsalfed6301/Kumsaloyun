@@ -962,7 +962,77 @@ async def daily_bonus(client: Client, message: Message):
         await message.reply(f"__Günlük bonus aldınız! 🚀 50.000 TL eklendi.😎__\n**Güncel bakiyeniz: `{user_balances[message.from_user.id]}` 💰**")
     except Exception as e:
         await message.reply(f"__⚡️ Günlük bonus verilirken bir hata oluştu.__\n__ℹ️ Bot'a start çektiğinizden emin olun.__")
+        
+#___atm_____#
+@app.on_message(filters.command(["atm"]) & filters.group)
+async def daily_atm(client: Client, message: Message):
+    if is_user_blocked(message.from_user.id):
+        await message.reply("__Üzgünüm, bu komutu kullanma yetkiniz engellendi. 🚫__")
+        return
+        
+    try:
+        current_time = datetime.now()
+        
+        
+        user_atm_data = collection.find_one({'user_id': message.from_user.id})
+        if user_atm_data:
+            last_atm_time = user_atm_data['last_atm_time']
+            last_atm_time = datetime.fromisoformat(last_atm_time)
+        else:
+            last_atm_time = None
+        
+        if last_atm_time:
+            
+            elapsed_time = current_time - last_atm_time
+            remaining_time = atm_interval_hours * 3600 - elapsed_time.total_seconds()
+            
+            if remaining_time > 0:
+                minutes_remaining = int(remaining_time // 60)
+                hours_remaining = int(minutes_remaining // 60)
+                await message.reply(f"__Bu komutu tekrar kullanabilmek için {hours_remaining} saat {minutes_remaining % 60} dakika beklemeniz gerekmektedir. 💫__")
+                return
 
+        
+        user_id = message.from_user.id
+        user_balances[user_id] += 100000
+        save_balance(user_id, user_balances[user_id])
+
+        
+        if last_atm_time:
+            collection.update_one({'user_id': user_id}, {'$set': {'last_atm_time': current_time.isoformat()}})
+        else:
+            collection.insert_one({'user_id': user_id, 'last_atm_time': current_time.isoformat()})
+            
+        
+        load_richest_users()
+        save_richest_users()
+
+        
+        user_last_atm_time[message.from_user.id] = current_time.timestamp()
+
+        
+        await message.reply(f"__Günlük bonus aldınız! 🚀 100.000 TL eklendi.😎__\n**Güncel bakiyeniz: `{user_balances[message.from_user.id]}` 💰**")
+    except Exception as e:
+        await message.reply(f"__⚡️ Günlük bonus verilirken bir hata oluştu.__\n__ℹ️ Bot'a start çektiğinizden emin olun.__")
+
+#________
+#atm#
+#________
+async def daily_atm():
+    while True:
+        try:
+            for user_id in user_balances:
+                user_balances[user_id] += 10000
+            await asyncio.sleep(24 * 3600)  # 24 saat bekle
+        except Exception as e:
+            print(f"Günlük bonus alınırken hata oluştu: {e}")
+
+
+
+# Günlük bonusu başlat
+asyncio.ensure_future(daily_atm())
+
+#________________________________________
 
 
 
