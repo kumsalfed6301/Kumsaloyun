@@ -373,7 +373,7 @@ async def play_basket(client: Client, message: Message):
     user_id = message.from_user.id
 
     if user_id not in user_balances:
-        await message.reply("__Basketbol oyununu oynamak için önce özelden start verin. 💫__              🏷️ @AcelyaMusicBot ")
+        await message.reply("__Basketbol oyununu oynamak için önce özelden start verin. 💫__               🏷️ @AcelyaMusicBot ")
         return
 
     current_time = datetime.now()
@@ -485,7 +485,7 @@ async def play_basket(client: Client, message: Message):
     user_id = message.from_user.id
 
     if user_id not in user_balances:
-        await message.reply("__Futbol oyununu oynamak için önce özelden start verin. 💫__")
+        await message.reply("__Futbol oyununu oyununu oynamak için önce özelden start verin. 💫__               🏷️ @AcelyaMusicBot ")
         return
 
     current_time = datetime.now()
@@ -599,7 +599,7 @@ async def play_slot(client: Client, message: Message):
 
     
     if user_id not in user_balances:
-        await message.reply("__Slot oyununu oynamak için önce özelden start verin. 💫__")
+        await message.reply("__Slot oyununu oyununu oynamak için önce özelden start verin. 💫__               🏷️ @AcelyaMusicBot ")
         return
 
     
@@ -649,7 +649,7 @@ async def play_slot(client: Client, message: Message):
     user_balance = user_balances.get(user_id, 0)
 
     if amount > user_balance:
-        await message.reply("**Yeterli bakiyeniz yok.** 😢")
+        await message.reply("**Yeterli bakiyeniz yok.** 😢","Görev yap bakiye kazan @MAD1BOY")
         return
 
     
