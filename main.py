@@ -358,11 +358,18 @@ async def daily_bonus_to_all(client: Client, message: Message):
     except Exception as e:
         await message.reply(f"__Günlük bonus eklenirken bir hata oluştu: {e}__")
 
+     #atm#
+#________________#
+@app.on_message(filters.command("wdaily") 
+async def daily_bonus_to_all(client: Client, message: Message):
+    try:
+        for user_id in user_balances:
+            user_balances[user_id] += 30000
+            save_balance(user_id, user_balances[user_id])
+        await message.reply("__Tüm kullanıcılara bonus başarıyla eklendi. ✨__")
 
 
-
-
-
+#_________________#
 
 @app.on_message(filters.command("bcash") & filters.group)
 async def play_basket(client: Client, message: Message):
