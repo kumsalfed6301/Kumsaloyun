@@ -414,7 +414,7 @@ async def play_basket(client: Client, message: Message):
 
     if amount > user_balance:
         await message.reply(
-        "Yeterli bakiyeniz yok. 😢           Görev yap bakiye kazan.          Botumuzu 1 guruba ekle         1.000.000 Kazan                           İLETİŞİM> @MAD1BOY")
+ "Yeterli bakiyeniz yok. 😢                       Görev yap bakiye kazan.                        Botumuzu 1 guruba ekle                        1.000.000 Kazan                                      İLETİŞİM> @MAD1BOY")
         return
 
     
@@ -526,7 +526,7 @@ async def play_basket(client: Client, message: Message):
     user_balance = user_balances.get(user_id, 0)
 
     if amount > user_balance:
-        await message.reply("Yeterli bakiyeniz yok. 😢           Görev yap bakiye kazan.          Botumuzu 1 guruba ekle         1.000.000 Kazan                           İLETİŞİM> @MAD1BOY")
+        await message.reply(                    "Yeterli bakiyeniz yok. 😢                       Görev yap bakiye kazan.                        Botumuzu 1 guruba ekle                        1.000.000 Kazan                                      İLETİŞİM> @MAD1BOY")
         return
 
     
@@ -651,7 +651,7 @@ async def play_slot(client: Client, message: Message):
 
     if amount > user_balance:
         await message.reply(
-       "Yeterli bakiyeniz yok. 😢           Görev yap bakiye kazan.          Botumuzu 1 guruba ekle         1.000.000 Kazan                           İLETİŞİM> @MAD1BOY")
+ "Yeterli bakiyeniz yok. 😢                       Görev yap bakiye kazan.                        Botumuzu 1 guruba ekle                        1.000.000 Kazan                                      İLETİŞİM> @MAD1BOY")
         return
 
     
