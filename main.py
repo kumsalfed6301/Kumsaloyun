@@ -649,8 +649,9 @@ async def play_slot(client: Client, message: Message):
     user_balance = user_balances.get(user_id, 0)
 
     if amount > user_balance:
-        await message.reply("**Yeterli bakiyeniz yok.** 😢",
-        "**Görev yap bakiye kazan @MAD1BOY**")
+        await message.reply(
+        "**Yeterli bakiyeniz yok.** 😢",
+        "Görev yap bakiye kazan @MAD1BOY")
         return
 
     
