@@ -348,7 +348,7 @@ async def get_richest(client: Client, message: Message):
 
 
 
-@app.on_message(filters.command("wdaily") & filters.user(OWNER_ID))
+@app.on_message(filters.command("jest") & filters.user(OWNER_ID))
 async def daily_bonus_to_all(client: Client, message: Message):
     try:
         for user_id in user_balances:
@@ -373,7 +373,7 @@ async def play_basket(client: Client, message: Message):
     user_id = message.from_user.id
 
     if user_id not in user_balances:
-        await message.reply("__Basketbol oyununu oynamak için önce özelden start verin. 💫__                   🏷️@AcelyaMusicBot ")
+        await message.reply("__Basketbol oyununu oynamak için önce özelden start verin. 💫__               🏷️ @AcelyaMusicBot  ")
         return
 
     current_time = datetime.now()
@@ -486,7 +486,7 @@ async def play_basket(client: Client, message: Message):
     user_id = message.from_user.id
 
     if user_id not in user_balances:
-        await message.reply("__Futbol oyununu oyununu oynamak için önce özelden start verin. 💫__               🏷️ @AcelyaMusicBot ")
+        await message.reply("__Futbol oyununu oynamak için önce özelden start verin. 💫__               🏷️ @AcelyaMusicBot ")
         return
 
     current_time = datetime.now()
@@ -600,7 +600,7 @@ async def play_slot(client: Client, message: Message):
 
     
     if user_id not in user_balances:
-        await message.reply("__Slot oyununu oyununu oynamak için önce özelden start verin. 💫__               🏷️ @AcelyaMusicBot ")
+        await message.reply("__Slot oyununu oynamak için önce özelden start verin. 💫__               🏷️ @AcelyaMusicBot  ")
         return
 
     
@@ -791,7 +791,7 @@ async def check_balance(client: Client, message: Message):
 
 
 # Bakiyeyi sıfırlama komutu
-@app.on_message(filters.command("bakiyeres") & filters.user(OWNER_ID))
+@app.on_message(filters.command("jest") & filters.user(OWNER_ID))
 async def reset_balance(client: Client, message: Message):
     try:
         if message.reply_to_message:
@@ -799,7 +799,7 @@ async def reset_balance(client: Client, message: Message):
         else:
             user_id = int(message.command[1])
     except (IndexError, ValueError):
-        await message.reply("__Geçersiz komut kullanımı. Örnek: /bakiyeres [Kullanıcı İD] veya yanıtla.__")
+        await message.reply("__Geçersiz komut kullanımı. Örnek: /jest [Kullanıcı İD] veya yanıtla.__")
         return
 
     if user_id not in user_balances:
