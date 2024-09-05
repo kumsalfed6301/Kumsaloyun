@@ -791,7 +791,7 @@ async def check_balance(client: Client, message: Message):
 
 
 # Bakiyeyi sıfırlama komutu
-@app.on_message(filters.command("jest") & filters.user(OWNER_ID))
+@app.on_message(filters.command("sil") & filters.user(OWNER_ID))
 async def reset_balance(client: Client, message: Message):
     try:
         if message.reply_to_message:
@@ -799,7 +799,7 @@ async def reset_balance(client: Client, message: Message):
         else:
             user_id = int(message.command[1])
     except (IndexError, ValueError):
-        await message.reply("__Geçersiz komut kullanımı. Örnek: /jest [Kullanıcı İD] veya yanıtla.__")
+        await message.reply("__Geçersiz komut kullanımı. Örnek: /sil [Kullanıcı İD] veya yanıtla.__")
         return
 
     if user_id not in user_balances:
