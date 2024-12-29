@@ -1,5 +1,4 @@
 ffmpeg-python
-Pillow==9.5.0
 ujson
 wget 
 search_engine_parser
